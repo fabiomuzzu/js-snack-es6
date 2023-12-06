@@ -13,3 +13,6 @@ let bici = [
         peso: '30',
     },
 ];
+
+const {peso} = bici;
+console.log(peso); 
