@@ -1,3 +1,5 @@
+// Snack 1
+
 // Creo un array di oggetti
 let bici = [
     {
@@ -14,14 +16,14 @@ let bici = [
     },
 ];
 
-let pesi = [];
-for(i=0; i<bici.length; i++){
-    pesi.push(bici[i].peso);
-}
+let bici_leggera = bici[1];
 
-const peso_min = Math.min(...pesi);
+bici.forEach(element => {
+    if(element.peso < bici_leggera.peso){
+        bici_leggera = elem;
+    }
+});
 
-console.log(peso_min);
+let {nome, peso} = bici_leggera;
 
-console.log(`La bici ${bici[1].nome} è la più leggera con un peso di ${peso_min}`);
-
+console.log(`La bici più leggerà è ${nome} ed ha un peso di ${peso}kg`);
